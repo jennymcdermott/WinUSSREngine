@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c37694e8-fa0d-488c-91ac-bc79760fd148}</ProjectGuid>
+    <RootNamespace>WinUSSREngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin($(Platform))\$(ProjectName)($(PlatformShortName))-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int($(Platform))\$(ProjectName)($(PlatformShortName))-$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin($(Platform))\$(ProjectName)($(PlatformShortName))-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int($(Platform))\$(ProjectName)($(PlatformShortName))-$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>false</StringPooling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference />
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\WinUSSREngine.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\AppCmdParser.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\AppCmds.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Application.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Base.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Config.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Event.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Keybuffer.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\KeyEvent.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Keylogger.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Keys.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Layer.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\LayerStack.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Logfile.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Mousebuffer.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\MouseEvent.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\StringTools.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\NetFile.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\Connections.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\FileTransferData.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\NetObject.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\NetTypes.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\PacketManager.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\PacketStructs.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\Packet.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\TCPBase\PacketType.h" />
+    <ClInclude Include="src\WinUSSREngine\Base\Utility.h" />
+    <ClInclude Include="src\WinUSSREngine\Cryptology\CaesarModule.h" />
+    <ClInclude Include="src\WinUSSREngine\Cryptology\CipherModule.h" />
+    <ClInclude Include="src\WinUSSREngine\Cryptology\Ciphers.h" />
+    <ClInclude Include="src\WinUSSREngine\Cryptology\VigenereModule.h" />
+    <ClInclude Include="src\WinUSSREngine\Cryptology\XorModule.h" />
+    <ClInclude Include="src\WinUSSREngine\Evasion\AntiSandbox.h" />
+    <ClInclude Include="src\WinUSSREngine\Evasion\AntiVirtualMachine.h" />
+    <ClInclude Include="src\WinUSSREngine\Network\ClientTCP.h" />
+    <ClInclude Include="src\WinUSSREngine\Network\ServerTCP.h" />
+    <ClInclude Include="src\WinUSSREngine\Persistence\BasicPersist.h" />
+    <ClInclude Include="src\WinUSSREngine\Shellcode\Shellcode.h" />
+    <ClInclude Include="src\WinUSSREngine\Shellcode\ShellExec.h" />
+    <ClInclude Include="src\WinUSSREngine\Windows\Keyboard.h" />
+    <ClInclude Include="src\WinUSSREngine\Windows\Mouse.h" />
+    <ClInclude Include="src\WinUSSREngine\Windows\RemoteCmd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\pch-c.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)$(TargetName)-c.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="src\WinUSSREngine\Base\AppCmdParser.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Application.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Keybuffer.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Keylogger.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Layer.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\LayerStack.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Logfile.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Mousebuffer.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Netfile.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\StringTools.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\TCPBase\PacketManager.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\TCPBase\PacketStructs.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\TCPBase\Packet.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Base\Utility.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Cryptology\CaesarModule.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Cryptology\CipherModule.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Cryptology\Ciphers.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Cryptology\VigenereModule.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Cryptology\XorModule.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Evasion\AntiSandbox.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Evasion\AntiVirtualMachine.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Network\ClientTCP.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Network\ClTCPSendRecieve.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Network\ServerTCP.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Network\SvTCPSendRecieve.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Persistence\BasicPersist.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Shellcode\Shellcode.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Shellcode\ShellExec.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Windows\Keyboard.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Windows\Mouse.cpp" />
+    <ClCompile Include="src\WinUSSREngine\Windows\RemoteCmd.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
