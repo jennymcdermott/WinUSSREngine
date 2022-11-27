@@ -1,5 +1,6 @@
 #include "Entrypoint.h"
 #include <WinUSSREngine/Base/Application.h>
+#include "DllLayer/DllLayer.h"
 
 namespace WinUSSREngine
 {
@@ -7,7 +8,7 @@ namespace WinUSSREngine
 	{
 	public:
 		ShellDll() : Application() {
-
+			PushLayer(new DllLayer()); // Forgot to push a dll layer again
 		}
 
 		virtual ~ShellDll() = default;
