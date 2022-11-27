@@ -19,6 +19,8 @@ To get started using this:
     delete Sandbox;
 ```
 
+<bold>Optionally you can just look at how ShellDll is setup in order to get an idea of how to use this garbage fucking library.</bold>
+
 Finally: I recommend using the shellcode stuff, the tcp code was used from Lilith Rat and rewritten into my own code style with some added features (I.e. A keylogger lmfao)
          however it's fucking garbage in my opinion. Use at your own risk.
          
