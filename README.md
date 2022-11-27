@@ -10,11 +10,11 @@ To get started using this:
 - Include in a project add a ref
 - do some setup
 - create an entry point that at some point has the following lines of code:
--```c++
-  auto Sandbox = WinUSSREngine::CreateApp();
-  Sandbox->run();
-  delete Sandbox;
- -```
+  -```
+    auto Sandbox = WinUSSREngine::CreateApp();
+    Sandbox->run();
+    delete Sandbox;
+  -```
 Finally: I recommend using the shellcode stuff, the tcp code was used from Lilith Rat and rewritten into my own code style with some added features (I.e. A keylogger lmfao)
          however it's fucking garbage in my opinion. Use at your own risk.
          
