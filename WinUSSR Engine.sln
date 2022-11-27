@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExampleDll", "ExampleDll", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinUSSREngine", "WinUSSREngine\WinUSSREngine.vcxproj", "{C37694E8-FA0D-488C-91AC-BC79760FD148}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShellDll", "ShellDll\ShellDll.vcxproj", "{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stupid", "Stupid\Stupid.vcxproj", "{A26111AE-05EC-443E-B001-3438FF5B39AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -25,12 +29,30 @@ Global
 		{C37694E8-FA0D-488C-91AC-BC79760FD148}.Release|x64.Build.0 = Release|x64
 		{C37694E8-FA0D-488C-91AC-BC79760FD148}.Release|x86.ActiveCfg = Release|Win32
 		{C37694E8-FA0D-488C-91AC-BC79760FD148}.Release|x86.Build.0 = Release|Win32
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Debug|x64.ActiveCfg = Debug|x64
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Debug|x64.Build.0 = Debug|x64
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Debug|x86.ActiveCfg = Debug|Win32
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Debug|x86.Build.0 = Debug|Win32
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Release|x64.ActiveCfg = Release|x64
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Release|x64.Build.0 = Release|x64
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Release|x86.ActiveCfg = Release|Win32
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5}.Release|x86.Build.0 = Release|Win32
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Debug|x64.ActiveCfg = Debug|x64
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Debug|x64.Build.0 = Debug|x64
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Debug|x86.ActiveCfg = Debug|Win32
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Debug|x86.Build.0 = Debug|Win32
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Release|x64.ActiveCfg = Release|x64
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Release|x64.Build.0 = Release|x64
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Release|x86.ActiveCfg = Release|Win32
+		{A26111AE-05EC-443E-B001-3438FF5B39AE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C37694E8-FA0D-488C-91AC-BC79760FD148} = {73956B1A-ACC2-4DA2-B958-32BA7E34543D}
+		{1813AC0A-6DFD-49CF-B4EE-0956A8A082F5} = {D13EE1CD-D72A-4FB9-8C1C-32A37D900F6E}
+		{A26111AE-05EC-443E-B001-3438FF5B39AE} = {D13EE1CD-D72A-4FB9-8C1C-32A37D900F6E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F922C3F-6AD8-4961-BFAB-3D1AE154FEDA}
