@@ -4,6 +4,7 @@
 #include "LayerStack.h"
 #include "WinUSSREngine/Windows/Keyboard.h"
 #include "WinUSSREngine/Windows/Mouse.h"
+#include <optional>
 
 namespace WinUSSREngine
 {
@@ -26,6 +27,8 @@ namespace WinUSSREngine
 		//Mouse& mouse() noexcept(true);
 
 		static Application& GetApp() noexcept(true);
+	private:
+		static std::optional<int> ProcessMessages() noexcept(true);
 	private:
 		LayerStack m_layerStack;
 		bool m_isClosed = false;

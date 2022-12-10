@@ -5,6 +5,21 @@ namespace WinUSSREngine
 {
 	Application* Application::s_Instance = nullptr;
 	Application& Application::GetApp() noexcept(true) { return *s_Instance; }
+	
+	std::optional<int> Application::ProcessMessages() noexcept(true)
+	{
+		MSG msg = { 0 };
+		while (GetMessage(&msg, NULL, 0, 0) != 0)
+		{
+			if (msg.message == WM_QUIT)
+				msg.wParam;
+
+			TranslateMessage(&msg);
+			DispatchMessageA(&msg);
+		}
+		return {};
+	}
+
 	Application::Application() 
 	{ 
 		assert("App already running" && s_Instance != nullptr);
@@ -46,9 +61,12 @@ namespace WinUSSREngine
 	int Application::run() noexcept(true) {
 		while (!m_isClosed)
 		{
+			if (const auto ecode = ProcessMessages())
+				return *ecode;
+
 			for (auto& layer : m_layerStack)
 				layer->OnUpdate();
 		}
-		return 0;
+		return 0x45; // lol nice
 	}
 }
